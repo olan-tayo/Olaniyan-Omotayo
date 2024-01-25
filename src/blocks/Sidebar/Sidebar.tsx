@@ -27,10 +27,9 @@ const Sidebar = () => {
       <div className="hidden md:flex gap-4 flex-col cursor-pointer ">
         {pages?.map((page, index) => {
           return (
-            <Link href={`#${page}`}>
+            <Link href={`#${page}`} key={index}>
               <div
                 className="flex gap-4 items-center"
-                key={index}
                 onClick={() => setSelectedPage(page)}
               >
                 <div
