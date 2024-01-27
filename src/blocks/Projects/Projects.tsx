@@ -1,10 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Althemis from "../../../public/althemis.jpeg";
 import Torrista from "../../../public/torrista.jpeg";
 import Kamoky from "../../../public/kamoky.jpeg";
 import Aretehub from "../../../public/arete.jpeg";
+
+import {
+  // Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+} from "react-scroll";
 
 const Projects = () => {
   const projects = [
@@ -69,6 +80,27 @@ const Projects = () => {
       ],
     },
   ];
+
+  useEffect(() => {
+    // Registering the 'begin' event and logging it to the console when triggered.
+    Events.scrollEvent.register("begin", (to, element) => {
+      console.log("begin", to, element);
+    });
+
+    // Registering the 'end' event and logging it to the console when triggered.
+    Events.scrollEvent.register("end", (to, element) => {
+      console.log("end", to, element);
+    });
+
+    // Updating scrollSpy when the component mounts.
+    scrollSpy.update();
+
+    // Returning a cleanup function to remove the registered events when the component unmounts.
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
   return (
     <div>
       <div className="w-full pt-[56px] ">
@@ -107,16 +139,16 @@ const Projects = () => {
                           <path
                             d="M7 17L17 7"
                             stroke="#FAF6F6"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                           <path
                             d="M7 7H17V17"
                             stroke="#FAF6F6"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                         </svg>
                       </div>
@@ -160,16 +192,16 @@ const Projects = () => {
                 <path
                   d="M7 17L17 7"
                   stroke="#FAF6F6"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M7 7H17V17"
                   stroke="#FAF6F6"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>

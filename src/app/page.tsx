@@ -22,12 +22,12 @@ const Page = () => {
             <Home />
           </section>
 
-          <section className="w-full" id="experience">
-            <Experience />
-          </section>
-
           <section className="w-full" id="projects">
             <Projects />
+          </section>
+
+          <section className="w-full" id="experience">
+            <Experience />
           </section>
 
           <section>

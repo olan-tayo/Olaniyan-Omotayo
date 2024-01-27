@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const Sidebar = () => {
-  const pages = ["about", "experience", "projects"];
+  const pages = ["about", "projects", "experience"];
   const [selectedPage, setSelectedPage] = useState("about");
   return (
     <div className="relative h-full lg:h-[100vh] pt-[5vh] md:pt-[13vh] ">

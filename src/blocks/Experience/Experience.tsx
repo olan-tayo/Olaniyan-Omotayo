@@ -87,16 +87,16 @@ const Experience = () => {
                         <path
                           d="M7 17L17 7"
                           stroke="#FAF6F6"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
                         <path
                           d="M7 7H17V17"
                           stroke="#FAF6F6"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
                       </svg>
                     </div>
@@ -123,7 +123,7 @@ const Experience = () => {
           })}
         </div>
 
-        <Link href="/resume">
+        <Link href="https://olaniyan-omotayo.vercel.app/resume" target="_blank">
           <div className="flex items-center gap-1 cursor-pointer px-0  md:px-6">
             <p className="text-base font-medium text-primary-50">
               View Full Resume
@@ -139,16 +139,16 @@ const Experience = () => {
                 <path
                   d="M7 17L17 7"
                   stroke="#FAF6F6"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M7 7H17V17"
                   stroke="#FAF6F6"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
