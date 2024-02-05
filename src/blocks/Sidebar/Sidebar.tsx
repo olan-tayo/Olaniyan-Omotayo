@@ -15,7 +15,7 @@ const Sidebar = () => {
     if (selectedPage === "") {
       setSelectedPage("about");
     }
-  }, []);
+  }, [selectedPage]);
 
   return (
     <div className="w-full md:w-[40%] h-full md:h-screen text-primary-50">
@@ -30,7 +30,7 @@ const Sidebar = () => {
 
           <p className="text-[15px] font-normal text-primary-50 pb-[64px] leading-6 w-full md:w-[60%]">
             I create pixel-perfect interfaces, so your journey through this
-            space isn't just smooth but fruity
+            space isn{"'"}t just smooth but fruity
           </p>
         </div>
 
