@@ -1,7 +1,8 @@
 import Content from "@/blocks/Content";
 import Sidebar from "@/blocks/Sidebar/Sidebar";
+import All from "@/blocks/all";
 import { Metadata } from "next";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
   title: "Olaniyan Omotayo",
@@ -9,15 +10,7 @@ export const metadata: Metadata = {
 };
 
 const Page = () => {
-  return (
-    <div className=" bg-primary spacings">
-      <div className=" block md:flex gap-0  md:gap-[26px] lg:gap-[56px] spacings">
-        <Sidebar />
-
-        <Content />
-      </div>
-    </div>
-  );
+  return <All />;
 };
 
 export default Page;

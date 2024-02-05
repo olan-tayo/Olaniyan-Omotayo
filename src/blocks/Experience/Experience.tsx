@@ -56,7 +56,7 @@ const Experience = () => {
     <div>
       {" "}
       <div className="w-full pt-[56px] ">
-        <p className="text-sm font-bold text-primary-50 uppercase mb-6 px-0 md:px-6">
+        <p className="text-[15px] font-bold text-primary-50 uppercase mb-6 px-0 md:px-6">
           EXPERIENCE
         </p>
 
@@ -69,11 +69,11 @@ const Experience = () => {
                  md:p-6 md:hover:rounded-lg transition-all duration-300"
               >
                 <div className="flex gap-2 md:gap-4 items-center mb-6">
-                  <p className="text-sm font-normal text-primary-100 uppercase">
+                  <p className="text-[15px] font-normal text-primary-100 uppercase">
                     {experience?.date?.from} - {experience?.date?.to}
                   </p>
                   <div className="flex items-center gap-1 cursor-pointer ">
-                    <p className="text-base font-medium text-primary-50">
+                    <p className="text-[15px] font-medium text-primary-50">
                       {experience?.role}, {experience?.company}
                     </p>
                     <div>
@@ -102,7 +102,7 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-base font-normal leading-6 text-primary-50  mb-6">
+                <p className="text-[15px] font-normal leading-6 text-primary-50  mb-6">
                   {experience?.summary}
                 </p>
                 {/* SKILLS */}
@@ -113,7 +113,7 @@ const Experience = () => {
                         key={index}
                         className="rounded-2xl bg-secondary-50 flex justify-center w-fit px-4 py-1 text-secondary"
                       >
-                        <p className="text-sm font-semibold">{skill}</p>
+                        <p className="text-[15px] font-semibold">{skill}</p>
                       </div>
                     );
                   })}
@@ -125,7 +125,7 @@ const Experience = () => {
 
         <Link href="https://olaniyan-omotayo.vercel.app/resume" target="_blank">
           <div className="flex items-center gap-1 cursor-pointer px-0  md:px-6">
-            <p className="text-base font-medium text-primary-50">
+            <p className="text-[15px] font-medium text-primary-50">
               View Full Resume
             </p>
             <div>

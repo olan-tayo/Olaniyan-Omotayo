@@ -14,7 +14,7 @@ body {
 
 @layer components {
   .spacings {
-    @apply px-[10px] md:px-[30px] lg:px-[50px] lg:max-w-[1440px] w-full m-[auto];
+    @apply px-[10px] md:px-[20px] lg:px-[70px] lg:max-w-[1440px] w-full m-[auto];
   }
 }
 

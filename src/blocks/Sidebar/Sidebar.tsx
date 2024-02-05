@@ -18,21 +18,19 @@ const Sidebar = () => {
   }, []);
 
   return (
-    <div className="w-full md:w-[45%] h-full md:h-screen text-primary-50">
+    <div className="w-full md:w-[40%] h-full md:h-screen text-primary-50">
       <div className="w-full md:w-[45%] h-full lg:h-[100vh] pt-[5vh] md:pt-[13vh] block md:fixed  ">
         <div>
-          <p className="text-[28px] font-bold text-primary-50 pb-2">
+          <p className="text-[32px] font-bold text-primary-50 pb-2">
             Omotayo Olaniyan
           </p>
           <p className="text-base font-medium text-primary-50 pb-4">
             Front End Engineer
           </p>
 
-          <p className="text-base font-normal text-primary-50 pb-[64px] leading-6 w-full md:w-[60%]">
-            I am an experienced Frontend Engineer skilled in crafting elegant
-            and responsive user interfaces. Proficient in modern web development
-            technologies, developing, optimizing, and delivering high-value
-            enterprise-level solutions.
+          <p className="text-[15px] font-normal text-primary-50 pb-[64px] leading-6 w-full md:w-[60%]">
+            I create pixel-perfect interfaces, so your journey through this
+            space isn't just smooth but fruity
           </p>
         </div>
 
@@ -54,7 +52,7 @@ const Sidebar = () => {
                   onClick={() => setSelectedPage(page)}
                 >
                   <div
-                    className="h-1"
+                    className="h-[3px]"
                     style={{
                       width: selectedPage === page ? "140px" : "72px",
                       background:

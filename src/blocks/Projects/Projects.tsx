@@ -81,30 +81,10 @@ const Projects = () => {
     },
   ];
 
-  useEffect(() => {
-    // Registering the 'begin' event and logging it to the console when triggered.
-    Events.scrollEvent.register("begin", (to, element) => {
-      console.log("begin", to, element);
-    });
-
-    // Registering the 'end' event and logging it to the console when triggered.
-    Events.scrollEvent.register("end", (to, element) => {
-      console.log("end", to, element);
-    });
-
-    // Updating scrollSpy when the component mounts.
-    scrollSpy.update();
-
-    // Returning a cleanup function to remove the registered events when the component unmounts.
-    return () => {
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
-    };
-  }, []);
   return (
     <div>
       <div className="w-full pt-[56px] ">
-        <p className="text-sm font-bold text-primary-50 uppercase mb-6 px-0 md:px-6">
+        <p className="text-[15px] font-bold text-primary-50 uppercase mb-6 px-0 md:px-6">
           PROJECTS
         </p>
 
@@ -125,7 +105,7 @@ const Projects = () => {
                 <div className="">
                   <div className="flex gap-4 items-center mb-2">
                     <div className="flex items-center gap-1">
-                      <p className="text-base font-medium text-primary-50">
+                      <p className="text-[15px] font-medium text-primary-50">
                         {project?.name}
                       </p>
                       <div>
@@ -154,7 +134,7 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-base font-normal leading-6 text-primary-50  mb-6 max-w-[537px]">
+                  <p className="text-[15px] font-normal leading-6 text-primary-50  mb-6 max-w-[537px]">
                     {project?.summary}
                   </p>
                   {/* SKILLS */}
@@ -165,7 +145,7 @@ const Projects = () => {
                           key={index}
                           className="rounded-2xl bg-secondary-50 flex justify-center w-fit px-4 py-1 text-secondary"
                         >
-                          <p className="text-sm font-semibold">{skill}</p>
+                          <p className="text-[15px] font-semibold">{skill}</p>
                         </div>
                       );
                     })}
@@ -178,7 +158,7 @@ const Projects = () => {
 
         <Link href="/resume">
           <div className="flex items-center gap-1 cursor-pointer px-0  md:px-6 mt-[15px] md:mt-[36px]">
-            <p className="text-base font-medium text-primary-50">
+            <p className="text-[15px] font-medium text-primary-50">
               View Project Library
             </p>
             <div>

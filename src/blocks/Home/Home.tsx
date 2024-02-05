@@ -2,10 +2,10 @@ const Home = () => {
   return (
     <div className="w-full pb-0 md:py-0 px-0 md:px-6 pt-[5vh] md:pt-[13vh]">
       <div className="w-full  ">
-        <p className="text-sm font-bold text-primary-50 uppercase mb-6">
+        <p className="text-[15px] font-bold text-primary-50 uppercase mb-6">
           ABOUT
         </p>
-        <p className="text-base font-normal text-primary-50 leading-6 mb-6 md:mb-0">
+        <p className="text-[15px] font-normal text-primary-50 leading-6 mb-6 md:mb-0">
           I have an expertise as a seasoned Frontend Engineer with the ability
           to design sophisticated and adaptable user interfaces. Proficient in
           contemporary web development technologies, I specialize in creating,
