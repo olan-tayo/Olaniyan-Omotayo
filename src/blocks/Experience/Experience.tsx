@@ -65,7 +65,7 @@ const Experience = () => {
             return (
               <div
                 key={index}
-                className="mb-[60px] md:mb-[48px] md:hover:bg-[#202531] p-0
+                className="mb-[60px] md:mb-[48px]  p-0
                  md:p-6 md:hover:rounded-lg transition-all duration-300"
               >
                 <div className="flex gap-2 md:gap-4 items-center mb-6">
@@ -76,7 +76,7 @@ const Experience = () => {
                     <p className="text-[15px] font-medium text-primary-50">
                       {experience?.role}, {experience?.company}
                     </p>
-                    <div>
+                    {/* <div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -99,7 +99,7 @@ const Experience = () => {
                           strokeLinejoin="round"
                         />
                       </svg>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <p className="text-[15px] font-normal leading-6 text-primary-50  mb-6">

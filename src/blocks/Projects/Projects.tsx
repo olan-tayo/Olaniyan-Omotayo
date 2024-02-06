@@ -33,6 +33,7 @@ const Projects = () => {
         "Tailwind css",
         "Material UI",
       ],
+      link: "https://www.althemis.io/",
     },
     {
       img: Torrista,
@@ -48,6 +49,7 @@ const Projects = () => {
         "Tailwind css",
         "Material UI",
       ],
+      link: "https://torrista.com.ng/",
     },
     {
       img: Kamoky,
@@ -63,6 +65,7 @@ const Projects = () => {
         "Tailwind css",
         "Material UI",
       ],
+      link: "https://kamoky.com/",
     },
     {
       img: Aretehub,
@@ -78,6 +81,7 @@ const Projects = () => {
         "Tailwind css",
         "Material UI",
       ],
+      link: "https://www.thearetehub.com/",
     },
   ];
 
@@ -93,6 +97,9 @@ const Projects = () => {
             return (
               <div
                 key={index}
+                onClick={() => {
+                  window.open(project?.link, "_blank");
+                }}
                 className="block lg:flex gap-4 w-full pb-[70px] md:pb-6  md:p-6 md:hover:bg-[#202531] md:hover:rounded-lg transition-all duration-300  cursor-pointer "
               >
                 <div className="h-[120px] lg:h-[63px] w-[80%] lg:w-[120px] rounded-[2px] border-[0.5px] border-secondary border-[dashed] mb-4 lg:mb-0">
@@ -156,7 +163,7 @@ const Projects = () => {
           })}
         </div>
 
-        <Link href="/resume">
+        {/* <Link href="/resume">
           <div className="flex items-center gap-1 cursor-pointer px-0  md:px-6 mt-[15px] md:mt-[36px]">
             <p className="text-[15px] font-medium text-primary-50">
               View Project Library
@@ -186,7 +193,7 @@ const Projects = () => {
               </svg>
             </div>
           </div>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

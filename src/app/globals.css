@@ -21,3 +21,17 @@ body {
 ::-webkit-scrollbar {
   width: 0px;
 }
+
+.shadow-cursor-container {
+  position: relative;
+}
+
+.shadow-cursor {
+  position: absolute;
+  width: 00px;
+  height: 0px;
+  opacity: 0.3; /* Set opacity to 1 to fully show the shadow */
+  box-shadow: 0 0 200px 100px rgba(33, 150, 243, 0.5);
+  border-radius: 50%;
+  pointer-events: none; /* Ensure the shadow cursor doesn't interfere with other elements */
+}
