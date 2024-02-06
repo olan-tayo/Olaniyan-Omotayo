@@ -45,11 +45,8 @@ const Projects = () => {
         <div>
           {projects?.map((project: ProjectsType, index: number) => {
             return (
-              <Link href="/project/1">
-                <div
-                  key={index}
-                  className="block lg:flex gap-4 w-full pb-[70px] md:pb-6  md:p-6 md:hover:bg-[#202531] md:hover:rounded-lg transition-all duration-300  cursor-pointer "
-                >
+              <Link key={index} href="/project/1">
+                <div className="block lg:flex gap-4 w-full pb-[70px] md:pb-6  md:p-6 md:hover:bg-[#202531] md:hover:rounded-lg transition-all duration-300  cursor-pointer ">
                   <div className="h-[120px] lg:h-[63px] w-[80%] lg:w-[120px] rounded-[2px] border-[0.5px] border-secondary border-[dashed] mb-4 lg:mb-0">
                     <img
                       alt={project?.name}
