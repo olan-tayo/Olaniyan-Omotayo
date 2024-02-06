@@ -1,89 +1,27 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect } from "react";
-import Althemis from "../../../public/althemis.jpeg";
-import Torrista from "../../../public/torrista.jpeg";
-import Kamoky from "../../../public/kamoky.jpeg";
-import Aretehub from "../../../public/arete.jpeg";
-
-import {
-  // Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-} from "react-scroll";
+import React, { useEffect, useState } from "react";
+import { database } from "../../services/firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
+import { ProjectsType } from "@/types/projects";
+const dbInstance = collection(database, "projects");
 
 const Projects = () => {
-  const projects = [
-    {
-      img: Althemis,
-      name: "Althemis",
+  const [projects, setProjects] = useState<ProjectsType[]>([]);
 
-      summary:
-        "Successfully optimized data presentation processes for the Sharp app, enhancing efficiency for large datasets and thereby improving user experience for thousands of agribusinesses.",
-      skills: [
-        "React",
-        "Javascript",
-        "Typescript",
-        "Jest",
-        "Tailwind css",
-        "Material UI",
-      ],
-      link: "https://www.althemis.io/",
-    },
-    {
-      img: Torrista,
-      name: "Torrista",
+  const handleGetProjects = async () => {
+    let res = await getDocs(dbInstance);
+    let newData: ProjectsType[] = [];
+    res.forEach((doc) => {
+      let data = doc.data() as ProjectsType;
+      newData.push(data);
+    });
+    setProjects((prevState: ProjectsType[]) => [...prevState, ...newData]);
+  };
 
-      summary:
-        "Successfully optimized data presentation processes for the Sharp app, enhancing efficiency for large datasets and thereby improving user experience for thousands of agribusinesses.",
-      skills: [
-        "React",
-        "Javascript",
-        "Typescript",
-        "Jest",
-        "Tailwind css",
-        "Material UI",
-      ],
-      link: "https://torrista.com.ng/",
-    },
-    {
-      img: Kamoky,
-      name: "Kamoky",
-
-      summary:
-        "Successfully optimized data presentation processes for the Sharp app, enhancing efficiency for large datasets and thereby improving user experience for thousands of agribusinesses.",
-      skills: [
-        "React",
-        "Javascript",
-        "Typescript",
-        "Jest",
-        "Tailwind css",
-        "Material UI",
-      ],
-      link: "https://kamoky.com/",
-    },
-    {
-      img: Aretehub,
-      name: "Aretehub",
-
-      summary:
-        "Successfully optimized data presentation processes for the Sharp app, enhancing efficiency for large datasets and thereby improving user experience for thousands of agribusinesses. Led project planning, provided regular updates to management, and developed a live web application.  Troubleshooted technical issues and resolved problems within a reasonable timeframe, ensuring minimal disruption to the platform's users.",
-      skills: [
-        "React",
-        "Javascript",
-        "Typescript",
-        "Jest",
-        "Tailwind css",
-        "Material UI",
-      ],
-      link: "https://www.thearetehub.com/",
-    },
-  ];
+  useEffect(() => {
+    handleGetProjects();
+  }, []);
 
   return (
     <div>
@@ -93,7 +31,7 @@ const Projects = () => {
         </p>
 
         <div>
-          {projects?.map((project, index) => {
+          {projects?.map((project: ProjectsType, index: number) => {
             return (
               <div
                 key={index}
@@ -103,7 +41,7 @@ const Projects = () => {
                 className="block lg:flex gap-4 w-full pb-[70px] md:pb-6  md:p-6 md:hover:bg-[#202531] md:hover:rounded-lg transition-all duration-300  cursor-pointer "
               >
                 <div className="h-[120px] lg:h-[63px] w-[80%] lg:w-[120px] rounded-[2px] border-[0.5px] border-secondary border-[dashed] mb-4 lg:mb-0">
-                  <Image
+                  <img
                     alt={project?.name}
                     src={project?.img}
                     className="h-[120px] lg:h-[63px] w-[100%]"
@@ -146,7 +84,7 @@ const Projects = () => {
                   </p>
                   {/* SKILLS */}
                   <div className="flex flex-wrap gap-2 items-center">
-                    {project?.skills?.map((skill, index) => {
+                    {project?.skills?.map((skill: string, index: number) => {
                       return (
                         <div
                           key={index}

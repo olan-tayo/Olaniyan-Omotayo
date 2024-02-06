@@ -1,6 +1,7 @@
 "use client";
 
-import { Link } from "react-scroll";
+import { Link as ReactLink } from "react-scroll";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const Sidebar = () => {
@@ -30,14 +31,14 @@ const Sidebar = () => {
 
           <p className="text-[15px] font-normal text-primary-50 pb-[64px] leading-6 w-full md:w-[60%]">
             I create pixel-perfect interfaces, so your journey through this
-            space isn{"'"}t just smooth but fruity
+            space isn{"'"}t just smooth but ecstatic
           </p>
         </div>
 
         <div className="hidden md:flex gap-4 flex-col h-screen cursor-pointer ">
           {pages?.map((page, index) => {
             return (
-              <Link
+              <ReactLink
                 activeClass="active"
                 to={`${page}`}
                 spy={true}
@@ -71,7 +72,7 @@ const Sidebar = () => {
                     {page}
                   </p>
                 </div>
-              </Link>
+              </ReactLink>
             );
           })}
         </div>
@@ -80,7 +81,8 @@ const Sidebar = () => {
           className="hidden md:flex gap-4 items-center absolute bottom-[80px]"
           style={{ marginTop: "100px" }}
         >
-          <div>
+          {/* GITHUB */}
+          <Link href="https://github.com/olan-tayo" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -93,9 +95,10 @@ const Sidebar = () => {
                 fill="#FAF6F6"
               />
             </svg>
-          </div>
+          </Link>
 
-          <div>
+          {/* GMAIL */}
+          <Link href="mailto: olantyao3627@gmail.com" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -108,9 +111,13 @@ const Sidebar = () => {
                 fill="#FAF6F6"
               />
             </svg>
-          </div>
+          </Link>
 
-          <div>
+          {/* WHATSAPP */}
+          <Link
+            href="https://api.whatsapp.com/send?phone=+2348121094248&text=Hello Omotayo"
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -134,9 +141,10 @@ const Sidebar = () => {
                 </clipPath>
               </defs>
             </svg>
-          </div>
+          </Link>
 
-          <div>
+          {/* TWITTER */}
+          <Link href="https://twitter.com/Olan__tayo" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -149,9 +157,13 @@ const Sidebar = () => {
                 fill="#FAF6F6"
               />
             </svg>
-          </div>
+          </Link>
 
-          <div>
+          {/* LINKEDIn */}
+          <Link
+            href="https://www.linkedin.com/in/omotayo-olaniyan-9b342119a/"
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -176,7 +188,7 @@ const Sidebar = () => {
                 </clipPath>
               </defs>
             </svg>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
