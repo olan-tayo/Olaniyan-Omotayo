@@ -1,0 +1,21 @@
+
+.modal.enter-done{
+    opacity: 1;
+    pointer-events: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal.exit{
+    opacity: 0;
+}
+
+.modal.enter-done .modal-content{
+    transform: translateY(0);
+}
+
+
+.modal.exit .modal-content{
+    transform: translateY(-200px);
+}
