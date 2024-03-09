@@ -12,9 +12,9 @@ const Home = () => {
           excited is seeing ideas come to life.
           <br />
           <br />
-          When I’m not writing code, I’m usually going to the gym, playing with
-          Luna or hanging out with my friends and family, or watching my
-          favourite shows.
+          When I{"’"}m not writing code, I{"’"}m usually going to the gym,
+          playing with Luna or hanging out with my friends and family, or
+          watching my favourite shows.
         </p>
       </div>
     </div>

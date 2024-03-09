@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #141922;
-  margin: 0px;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 .sizer {
@@ -34,4 +32,10 @@ body {
   box-shadow: 0 0 200px 100px rgba(33, 150, 243, 0.5);
   border-radius: 50%;
   pointer-events: none; /* Ensure the shadow cursor doesn't interfere with other elements */
+}
+
+.resume {
+  margin: 0px !important;
+  padding: 0px !important;
+  background-color: #fff;
 }
