@@ -1,8 +1,6 @@
-import Content from "@/blocks/Content";
-import Sidebar from "@/blocks/Sidebar/Sidebar";
-import All from "@/blocks/all";
+import All from "@/blocks";
 import { Metadata } from "next";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Olaniyan Omotayo",
