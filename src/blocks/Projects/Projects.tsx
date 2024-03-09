@@ -195,6 +195,39 @@ const Projects = () => {
           </div>
         </ModalComponent>
       </div>
+
+      <Link href={"https://olaniyan-omotayo.vercel.app/resume"} target="_blank">
+        <div className="flex items-center gap-1  px-0  md:px-6 cursor-pointer">
+          <h6 className="text-[15px] font-medium text-primary-50 cursor-pointer">
+            View Full Resume
+          </h6>
+
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M7 17L17 7"
+                stroke="#FAF6F6"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M7 7H17V17"
+                stroke="#FAF6F6"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </Link>
     </div>
   );
 };
