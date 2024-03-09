@@ -30,8 +30,8 @@ const Sidebar = () => {
           </p>
 
           <p className="text-[15px] font-normal text-primary-50 pb-[64px] leading-6 w-full md:w-[60%]">
-            I create pixel-perfect interfaces, so your journey through this
-            space isn{"'"}t just smooth but ecstatic
+            I craft smooth, pixel-perfect interfaces and help bring your ideas
+            to life, with user experience as one of my top priority.
           </p>
         </div>
 
