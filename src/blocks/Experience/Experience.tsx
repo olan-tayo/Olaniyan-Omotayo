@@ -25,11 +25,19 @@ const Experience = () => {
         from: "JAN 2021",
         to: "APR 2021",
       },
-      role: "Front End Engineer Intern",
-      company: "BuildCodeSchool",
+      role: "Front End Engineer",
+      company: "AudalLabs",
       summary:
-        "Developed a responsive and user-friendly web application for children and undergraduates to learn how to code and also apply for coding lessons. Collaborated with stakeholders during development processes to confirm creative proposals and design best practices. Transformed fabulous designs from Figma with great skills in HTML, CSS, and Bootstrap.",
-      skills: ["HTML/CSS/SCSS", "Tailwind css", "React", "Javascript"],
+        "Collaborated with stakeholders during development processes to confirm creative proposals and design best practices.Researched emerging web technologies such as Astro and trends for possible incorporation into sites",
+      skills: [
+        "HTML/CSS/SCSS",
+        "Tailwind css",
+        "React",
+        "Gatsby",
+        "Wordpress",
+        "Teleport",
+        "Javascript",
+      ],
     },
     {
       date: {
