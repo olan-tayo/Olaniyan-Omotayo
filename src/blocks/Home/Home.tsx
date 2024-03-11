@@ -6,7 +6,7 @@ const Home = () => {
           ABOUT
         </p>
         <p className="text-[15px] font-normal text-primary-50 leading-6 mb-6 md:mb-0">
-          Hello, I am Omotayo but people call me {'"'}Omotee{'"'}. I am
+          Hello, I am Omotayo but people call me {'"'}Shosho{'"'}. I am
           passionate about solving problems faced by the society using the best
           technologies. I love paying attention to details. One of the things
           that makes me excited is seeing ideas come to life.
