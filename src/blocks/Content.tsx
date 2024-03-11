@@ -1,12 +1,45 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./Home/Home";
 import Projects from "./Projects/Projects";
 import Experience from "./Experience/Experience";
 import { Element } from "react-scroll";
 
 const Content = () => {
+  // const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const aboutSection = document.getElementById("about");
+  //     const projectsSection = document.getElementById("projects");
+
+  //     if (
+  //       aboutSection &&
+  //       window.scrollY >= aboutSection.offsetTop &&
+  //       window.scrollY < projectsSection
+  //         ? projectsSection?.offsetTop
+  //         : 0
+  //     ) {
+  //       setActiveSection("about");
+  //     } else if (
+  //       projectsSection &&
+  //       window.scrollY >= projectsSection.offsetTop
+  //     ) {
+  //       setActiveSection("projects");
+  //     } else {
+  //       setActiveSection(null);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  // console.log(activeSection);
+
   return (
     <div className="w-full md:w-[60%] overflow-x-auto text-primary-50">
       <Element className="w-full" name="about">
