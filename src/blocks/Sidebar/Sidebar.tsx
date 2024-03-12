@@ -22,14 +22,14 @@ const Sidebar = () => {
     <div className="w-full md:w-[40%] h-full md:h-screen text-primary-50">
       <div className="w-full md:w-[45%] h-full lg:h-[100vh] pt-[5vh] md:pt-[16vh] block md:fixed  ">
         <div>
-          <p className="text-xl md:text-[32px] font-bold text-primary-50 pb-2">
+          <p className="text-2xl md:text-[32px] font-bold text-primary-50 pb-2">
             Omotayo Olaniyan
           </p>
-          <p className="text-sm md:text-base font-medium text-primary-50 pb-4">
+          <p className="text-[15px] md:text-base font-medium text-primary-50 pb-4">
             Front End Engineer
           </p>
 
-          <p className="text-[13px] md:text-[15px] font-normal text-primary-50 pb-[40px] md:pb-[64px] leading-6 w-full md:w-[60%]">
+          <p className="text-[13.5px] md:text-[15px] font-normal text-primary-50 pb-[40px] md:pb-[64px] leading-6 w-full md:w-[60%]">
             I craft smooth, pixel-perfect interfaces and help bring your ideas
             to life, with user experience as one of my top priority.
           </p>

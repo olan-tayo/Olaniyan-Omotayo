@@ -76,11 +76,11 @@ const Experience = () => {
                  md:p-6 md:hover:rounded-lg transition-all duration-300"
               >
                 <div className="flex gap-2 md:gap-4 items-center mb-6">
-                  <p className="text-xs md:text-[15px] font-normal text-primary-100 uppercase">
+                  <p className="text-base md:text-[15px] font-normal text-primary-100 uppercase">
                     {experience?.date?.from} - {experience?.date?.to}
                   </p>
                   <div className="flex items-center gap-1 cursor-pointer ">
-                    <p className="text-xs md:text-[15px] font-medium text-primary-50">
+                    <p className="text-base md:text-[15px] font-medium text-primary-50">
                       {experience?.role}, {experience?.company}
                     </p>
                     {/* <div>
@@ -109,7 +109,7 @@ const Experience = () => {
                     </div> */}
                   </div>
                 </div>
-                <p className="text-xs md:text-[15px] font-normal leading-6 text-primary-50  mb-6">
+                <p className="text-base md:text-[15px] font-normal leading-6 text-primary-50  mb-6">
                   {experience?.summary}
                 </p>
                 {/* SKILLS */}
@@ -120,7 +120,7 @@ const Experience = () => {
                         key={index}
                         className="rounded-2xl bg-secondary-50 flex justify-center w-fit px-4 py-1 text-secondary"
                       >
-                        <p className="text-xs md:text-[15px] font-semibold">
+                        <p className="text-base md:text-[15px] font-semibold">
                           {skill}
                         </p>
                       </div>

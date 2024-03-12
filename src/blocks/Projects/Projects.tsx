@@ -50,11 +50,7 @@ const Projects = () => {
           {projects?.map((project: ProjectsType, index: number) => {
             return (
               <Link key={index} href={project?.link} target="_blank">
-                <div
-                  // onClick={() => setIsModalOpen(true)}
-
-                  className="block lg:flex gap-4 w-full pb-[70px] md:pb-6  md:p-6 md:hover:bg-[#202531] md:hover:rounded-lg transition-all duration-300  cursor-pointer "
-                >
+                <div className="block lg:flex gap-4 w-full pb-[70px] md:pb-6  md:p-6 md:hover:bg-[#202531] md:hover:rounded-lg transition-all duration-300  cursor-pointer ">
                   <div className="h-[120px] lg:h-[63px] w-[80%] lg:w-[120px] rounded-[2px] border-[0.5px] border-secondary border-[dashed] mb-4 lg:mb-0">
                     <img
                       alt={project?.name}
@@ -65,7 +61,7 @@ const Projects = () => {
                   <div className="">
                     <div className="flex gap-4 items-center mb-2">
                       <div className="flex items-center gap-1">
-                        <p className="text-xs md:text-[15px] font-medium text-primary-50">
+                        <p className="text-base md:text-[15px] font-medium text-primary-50">
                           {project?.name}
                         </p>
                         <div className="hidden md:block">
@@ -118,7 +114,7 @@ const Projects = () => {
                         </div>
                       </div>
                     </div>
-                    <p className="text-xs md:text-[15px] font-normal leading-6 text-primary-50  mb-6 max-w-[537px]">
+                    <p className="text-base md:text-[15px] font-normal leading-6 text-primary-50  mb-6 max-w-[537px]">
                       {project?.summary}
                     </p>
                     {/* SKILLS */}
@@ -129,7 +125,7 @@ const Projects = () => {
                             key={index}
                             className="rounded-2xl bg-secondary-50 flex justify-center w-fit px-4 py-1 text-secondary"
                           >
-                            <p className="text-xs md:text-[15px] font-semibold">
+                            <p className="text-base md:text-[15px] font-semibold">
                               {skill}
                             </p>
                           </div>
@@ -223,7 +219,7 @@ const Projects = () => {
 
       <Link href={"https://olaniyan-omotayo.vercel.app/resume"} target="_blank">
         <div className="flex items-center gap-1  px-0  md:px-6 cursor-pointer">
-          <h6 className="text-xs md:text-[15px] font-medium text-primary-50 cursor-pointer">
+          <h6 className="text-base md:text-[15px] font-medium text-primary-50 cursor-pointer">
             View Full Resume
           </h6>
 
