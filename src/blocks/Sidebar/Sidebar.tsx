@@ -78,8 +78,8 @@ const Sidebar = () => {
         </div>
 
         <div
-          className="hidden md:flex gap-4 items-center absolute bottom-[80px]"
-          style={{ marginTop: "100px" }}
+          className="hidden md:flex gap-4 items-center mt-[50px]"
+          // style={{ marginTop: "100px" }}
         >
           {/* GITHUB */}
           <Link href="https://github.com/olan-tayo" target="_blank">
