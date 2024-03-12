@@ -1,3 +1,4 @@
+import Header from "@/components/Header/Header";
 import React from "react";
 
 const Experience = () => {
@@ -64,9 +65,7 @@ const Experience = () => {
     <div>
       {" "}
       <div className="w-full pt-[56px] ">
-        <p className="text-[15px] font-bold text-primary-50 uppercase mb-6 px-0 md:px-6">
-          EXPERIENCE
-        </p>
+        <Header style="mb-6 px-0 md:px-6">EXPERIENCE</Header>
 
         <div>
           {experiences?.map((experience, index) => {

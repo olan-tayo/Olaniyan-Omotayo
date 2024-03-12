@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import Header from "@/components/Header/Header";
 
 const dbInstance = query(
   collection(database, "projects"),
@@ -43,9 +44,7 @@ const Projects = () => {
   return (
     <div>
       <div className="w-full pt-[56px] ">
-        <p className="text-[15px] font-bold text-primary-50 uppercase mb-6 px-0 md:px-6">
-          PROJECTS
-        </p>
+        <Header style="mb-6 px-0 md:px-6">PROJECTS</Header>
 
         <div>
           {projects?.map((project: ProjectsType, index: number) => {

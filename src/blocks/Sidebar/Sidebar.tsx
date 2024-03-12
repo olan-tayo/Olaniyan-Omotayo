@@ -20,7 +20,7 @@ const Sidebar = () => {
 
   return (
     <div className="w-full md:w-[40%] h-full md:h-screen text-primary-50">
-      <div className="w-full md:w-[45%] h-full lg:h-[100vh] pt-[5vh] md:pt-[13vh] block md:fixed  ">
+      <div className="w-full md:w-[45%] h-full lg:h-[100vh] pt-[5vh] md:pt-[16vh] block md:fixed  ">
         <div>
           <p className="text-[32px] font-bold text-primary-50 pb-2">
             Omotayo Olaniyan
