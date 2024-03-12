@@ -40,3 +40,12 @@ body {
   padding: 0px !important;
   background-color: #fff;
 }
+
+.luna:hover {
+  cursor: url("../../public/lulu.gif"), auto;
+  background: linear-gradient(to right, red, green, yellow, pink);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}

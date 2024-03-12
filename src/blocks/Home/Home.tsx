@@ -1,6 +1,10 @@
+// import { useState } from "react";
+import "../../app/globals.css";
 const Home = () => {
+  // const [isShowImage, setIsShowImage] = useState(false);
+
   return (
-    <div className="w-full pb-0 md:py-0 px-0 md:px-6 pt-[5vh] md:pt-[13vh]">
+    <div className="w-full relative pb-0 md:py-0 px-0 md:px-6 pt-[5vh] md:pt-[13vh]">
       <div className="w-full  ">
         <p className="text-[15px] font-bold text-primary-50 uppercase mb-6">
           ABOUT
@@ -13,8 +17,8 @@ const Home = () => {
           <br />
           <br />
           When I{"’"}m not writing code, I{"’"}m usually going to the gym,
-          playing with Luna or hanging out with my friends and family, or
-          watching my favourite shows.
+          playing with <span className="luna">Luna</span> or hanging out with my
+          friends and family, or watching my favourite shows.
         </p>
       </div>
     </div>
