@@ -9,7 +9,7 @@ const Header = ({ children, style }: Header) => {
   return (
     <div>
       <p
-        className={`${style} text-sm font-bold text-primary-50 uppercase mb-6`}
+        className={`${style} text-[13px] md:text-sm font-bold text-primary-50 uppercase mb-6`}
       >
         {children}
       </p>

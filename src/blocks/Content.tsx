@@ -55,7 +55,7 @@ const Content = () => {
       </Element>
 
       <section>
-        <p className="text-primary-50 text-[15px] font-medium px-0 md:px-6 pt-[60px] md:pt-[40px] pb-[100px]">
+        <p className="text-primary-50 text-xs md:text-[15px] font-medium px-0 md:px-6 pt-[60px] md:pt-[40px] pb-[100px]">
           Coded in{" "}
           <span className="underline underline-offset-2">
             Visual Studio Code{" "}

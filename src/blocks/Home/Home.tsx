@@ -8,7 +8,7 @@ const Home = () => {
     <div className="w-full relative pb-0 md:py-0 px-0 md:px-6 pt-[5vh] md:pt-[16vh]">
       <div className="w-full  ">
         <Header>About</Header>
-        <p className="text-[15px] font-normal text-primary-50 leading-6 mb-6 md:mb-0">
+        <p className="text-xs md:text-[15px] font-normal text-primary-50 leading-6 mb-6 md:mb-0">
           Hello, I am Omotayo but people call me {'"'}Shosho{'"'}. I am
           passionate about solving problems faced by the society using the best
           technologies. I love paying attention to details. One of the things

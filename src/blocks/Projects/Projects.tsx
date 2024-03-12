@@ -65,10 +65,10 @@ const Projects = () => {
                   <div className="">
                     <div className="flex gap-4 items-center mb-2">
                       <div className="flex items-center gap-1">
-                        <p className="text-[15px] font-medium text-primary-50">
+                        <p className="text-xs md:text-[15px] font-medium text-primary-50">
                           {project?.name}
                         </p>
-                        <div>
+                        <div className="hidden md:block">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -92,9 +92,33 @@ const Projects = () => {
                             />
                           </svg>
                         </div>
+                        <div className="block md:hidden">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M7 17L17 7"
+                              stroke="#FAF6F6"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M7 7H17V17"
+                              stroke="#FAF6F6"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                    <p className="text-[15px] font-normal leading-6 text-primary-50  mb-6 max-w-[537px]">
+                    <p className="text-xs md:text-[15px] font-normal leading-6 text-primary-50  mb-6 max-w-[537px]">
                       {project?.summary}
                     </p>
                     {/* SKILLS */}
@@ -105,7 +129,9 @@ const Projects = () => {
                             key={index}
                             className="rounded-2xl bg-secondary-50 flex justify-center w-fit px-4 py-1 text-secondary"
                           >
-                            <p className="text-[15px] font-semibold">{skill}</p>
+                            <p className="text-xs md:text-[15px] font-semibold">
+                              {skill}
+                            </p>
                           </div>
                         );
                       })}
@@ -197,15 +223,39 @@ const Projects = () => {
 
       <Link href={"https://olaniyan-omotayo.vercel.app/resume"} target="_blank">
         <div className="flex items-center gap-1  px-0  md:px-6 cursor-pointer">
-          <h6 className="text-[15px] font-medium text-primary-50 cursor-pointer">
+          <h6 className="text-xs md:text-[15px] font-medium text-primary-50 cursor-pointer">
             View Full Resume
           </h6>
 
-          <div>
+          <div className="hidden md:block">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M7 17L17 7"
+                stroke="#FAF6F6"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M7 7H17V17"
+                stroke="#FAF6F6"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+          <div className="block md:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
             >
