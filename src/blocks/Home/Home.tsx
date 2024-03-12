@@ -17,8 +17,9 @@ const Home = () => {
           <br />
           <br />
           When I{"’"}m not writing code, I{"’"}m usually going to the gym,
-          playing with <span className="luna">Luna</span> or hanging out with my
-          friends and family, or watching my favourite shows.
+          playing with <span className="luna text-[#E8E8E8]">Luna</span> or
+          hanging out with my friends and family, or watching my favourite
+          shows.
         </p>
       </div>
     </div>
