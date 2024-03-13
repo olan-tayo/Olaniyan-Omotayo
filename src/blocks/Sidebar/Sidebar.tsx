@@ -4,23 +4,29 @@ import { Link as ReactLink } from "react-scroll";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const Sidebar = () => {
-  const pages = ["about", "projects", "experience"];
+type Sidebar = {
+  onSelect: (page: string) => void;
+};
+
+const Sidebar = ({ onSelect }: Sidebar) => {
+  const pages = ["sidebar", "about", "projects", "experience"];
   const [selectedPage, setSelectedPage] = useState("");
 
   const handleSetActive = (to: string) => {
     setSelectedPage(to);
+    onSelect(to);
   };
 
   useEffect(() => {
     if (selectedPage === "") {
       setSelectedPage("about");
+      onSelect("");
     }
   }, [selectedPage]);
 
   return (
     <div className="w-full md:w-[40%] h-full md:h-screen text-primary-50">
-      <div className="w-full md:w-[45%] h-full lg:h-[100vh] pt-[5vh] md:pt-[16vh] block md:fixed  ">
+      <div className="w-full hidden md:block md:w-[45%] h-full lg:h-[100vh] pt-[5vh] md:pt-[16vh]  md:fixed">
         <div>
           <p className="text-2xl md:text-[32px] font-bold text-primary-50 pb-2">
             Omotayo Olaniyan
@@ -36,45 +42,50 @@ const Sidebar = () => {
         </div>
 
         <div className="hidden md:flex gap-4 flex-col h-screen cursor-pointer ">
-          {pages?.map((page, index) => {
-            return (
-              <ReactLink
-                activeClass="active"
-                to={`${page}`}
-                spy={true}
-                smooth={true}
-                offset={50}
-                duration={500}
-                onSetActive={handleSetActive}
-                key={index}
-              >
-                <div
-                  className="flex gap-4 items-center"
-                  onClick={() => setSelectedPage(page)}
+          {pages
+            // ?.filter((data) => data !== "sidebar")
+            ?.map((page, index) => {
+              return (
+                <ReactLink
+                  activeClass="active"
+                  to={`${page}`}
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  onSetActive={handleSetActive}
+                  key={index}
                 >
                   <div
-                    className="h-[3px]"
-                    style={{
-                      width: selectedPage === page ? "140px" : "72px",
-                      background:
-                        selectedPage === page ? "#7F62FF" : "#FAF6F680",
-                      transition: "width 0.3s ease, background 0.3s ease", // Add transition property
-                    }}
-                  ></div>
-                  <p
-                    style={
-                      selectedPage === page
-                        ? { color: "#7F62FF" }
-                        : { color: "#FAF6F680" }
-                    }
-                    className="text-sm font-bold  uppercase"
+                    className="flex gap-4 items-center"
+                    onClick={() => setSelectedPage(page)}
                   >
-                    {page}
-                  </p>
-                </div>
-              </ReactLink>
-            );
-          })}
+                    {page === "sidebar" ? null : (
+                      <div
+                        className="h-[3px]"
+                        style={{
+                          width: selectedPage === page ? "140px" : "72px",
+                          background:
+                            selectedPage === page ? "#7F62FF" : "#FAF6F680",
+                          transition: "width 0.3s ease, background 0.3s ease", // Add transition property
+                        }}
+                      ></div>
+                    )}
+
+                    <p
+                      style={
+                        selectedPage === page
+                          ? { color: "#7F62FF" }
+                          : { color: "#FAF6F680" }
+                      }
+                      className="text-sm font-bold  uppercase"
+                    >
+                      {page === "sidebar" ? null : page}
+                    </p>
+                  </div>
+                </ReactLink>
+              );
+            })}
         </div>
 
         <div

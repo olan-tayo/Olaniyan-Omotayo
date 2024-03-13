@@ -1,7 +1,8 @@
 import Header from "@/components/Header/Header";
 import React from "react";
+import { Content } from "../Content";
 
-const Experience = () => {
+const Experience = ({ page }: Content) => {
   const experiences = [
     {
       date: {
@@ -65,7 +66,20 @@ const Experience = () => {
     <div>
       {" "}
       <div className="w-full pt-[56px] ">
-        <Header style="mb-6 px-0 md:px-6">EXPERIENCE</Header>
+        <div
+          className={`${
+            page === "experience" &&
+            "block md:hidden fixed top-0 w-[100vh] h-fit pt-6 pb-0  pl-0 pr-3  backdrop-blur about bg-primary"
+          }`}
+        >
+          {page === "experience" && <Header>EXPERIENCE</Header>}
+        </div>
+
+        <div
+          className={`${page === "experience" ? "hidden md:block" : "block"} `}
+        >
+          <Header style="mb-6 px-0 md:px-6">EXPERIENCE</Header>
+        </div>
 
         <div>
           {experiences?.map((experience, index) => {

@@ -11,16 +11,16 @@ import Link from "next/link";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Header from "@/components/Header/Header";
+import { Content } from "../Content";
 
 const dbInstance = query(
   collection(database, "projects"),
   orderBy("createdAt", "asc")
 );
 
-const Projects = () => {
+const Projects = ({ page }: Content) => {
   const [projects, setProjects] = useState<ProjectsType[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const handleGetProjects = async () => {
     let res = await getDocs(dbInstance);
@@ -32,11 +32,6 @@ const Projects = () => {
     setProjects((prevState: ProjectsType[]) => [...prevState, ...newData]);
   };
 
-  // const handleOpenModal = (index: number) => {
-  //   setSelectedIndex(index);
-  //   setIsModalOpen(true);
-  // };
-
   useEffect(() => {
     handleGetProjects();
   }, []);
@@ -44,7 +39,20 @@ const Projects = () => {
   return (
     <div>
       <div className="w-full pt-[56px] ">
-        <Header style="mb-6 px-0 md:px-6">PROJECTS</Header>
+        <div
+          className={`${
+            page === "projects" &&
+            "block md:hidden fixed top-0 w-[100vh] h-fit pt-6 pb-0  pl-0 pr-3  backdrop-blur about bg-primary"
+          }`}
+        >
+          {page === "projects" && <Header>PROJECTS</Header>}
+        </div>
+
+        <div
+          className={`${page === "projects" ? "hidden md:block" : "block"} `}
+        >
+          <Header style="mb-6 px-0 md:px-6">PROJECTS</Header>
+        </div>
 
         <div>
           {projects?.map((project: ProjectsType, index: number) => {

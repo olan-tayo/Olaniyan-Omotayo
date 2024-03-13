@@ -6,6 +6,11 @@ import Content from "./Content";
 
 const All = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [page, setPage] = useState("");
+
+  const handlePageSelected = (page: string) => {
+    setPage(page);
+  };
 
   useEffect(() => {
     const handleMouseMove = (e: any) => {
@@ -22,8 +27,9 @@ const All = () => {
   return (
     <div className=" bg-primary spacings shadow-cursor-container">
       <div className=" block md:flex gap-0  md:gap-[26px] lg:gap-[36px] spacings">
-        <Sidebar />
-        <Content />
+        <Sidebar onSelect={handlePageSelected} />
+
+        <Content page={page} />
       </div>
       {/* Shadow cursor element */}
       <div
