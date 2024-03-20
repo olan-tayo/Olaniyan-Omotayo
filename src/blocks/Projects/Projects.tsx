@@ -225,7 +225,7 @@ const Projects = ({ page }: Content) => {
         </ModalComponent>
       </div>
 
-      <Link href={"https://olaniyan-omotayo.vercel.app/resume"} target="_blank">
+      <Link href={"https://www.omotayo.dev/resume"} target="_blank">
         <div className="flex items-center gap-1  px-0  md:px-6 cursor-pointer">
           <h6 className="text-base md:text-[15px] font-medium text-primary-50 cursor-pointer">
             View Full Resume
